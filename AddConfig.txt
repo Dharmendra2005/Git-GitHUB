@@ -1,0 +1,60 @@
+git config --global user.name "name"
+git config --global user.email "email"
+
+git config --global core.editor "code --wait"   for waiting mode
+
+git config --global core.autocrlf *input*
+
+git config --global -e
+
+stages-
+
+U - untracked
+A - added or staged
+C - commited
+
+making your own projects
+making git available in our projects
+making a checkpoint or saved point
+     adding files
+     staging files
+     commiting files
+
+
+git cmd which should be know first---------->
+git status -s -> to know current status of unstaged or staged files
+git log --oneline -> to know current status of  the saved point
+
+to ignore file in the folder we create a new .gitignore file in that folder
+
+how to make repo from vs code
+1. first is connect github with your vscode tool
+2. do git init
+3. do git commit -m "" 
+4. last is push that all commit(git push origin main) but it will not work because of repo went on github
+5. so go in Source Control and u will see that folder and then there is option to do publish your repo 
+
+
+going back to  some privious saved points
+        logiging everything
+        reverting back to saved point
+
+        git reset -hard HARD~1,2,3,4...
+        
+
+-----------------------------------------------------------
+1.-> do first intialize github
+2.-> we can check which file in which stages- git status -s
+3.-> we can check How much saved check points - git log --oneline  --graph
+So ->
+     git status tell about the status of files before and after commited files u have to some afte commit
+     git log telling about all history of the files
+
+what is opppsite of git init -> rm -rf .git it will disconnect the git 
+
+Git Branching
+
+git init
+git branch - it will show main branch
+git branch newbranchname - we are creating new branch
+git switch branchname - we are going to that branch
