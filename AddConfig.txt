@@ -7,6 +7,8 @@ git config --global core.autocrlf *input*
 
 git config --global -e
 
+git config --list
+
 stages-
 
 U - untracked
@@ -50,7 +52,7 @@ So ->
      git status tell about the status of files before and after commited files u have to some afte commit
      git log telling about all history of the files
 
-what is opppsite of git init -> rm -rf .git it will disconnect the git 
+what is opppsite of git init -> Remove-Item -Recurse -Force .git it will disconnect the git 
 
 Git Branching
 
@@ -58,3 +60,38 @@ git init
 git branch - it will show main branch
 git branch newbranchname - we are creating new branch
 git switch branchname - we are going to that branch
+git merge branchname - to conflic a branch in main branch
+merging techniques - ff(fast forward) merge , three way merge
+
+git branch -d branchname -> to delete branch
+
+git switch -C branchname -> here we first create branch and switch to that branch
+
+git stash -> this cmd when we do some changes in our branch but we don't to update that changes and want to keep in middle way
+then to come back with middle way use - > git stash apply and clear stash -> git stash clear
+
+
+---------------------------------------------------------->
+
+Collabrating ->>
+
+     first one create the folder 
+     uplaod that folder on github
+     add the collabrators
+     everybody clone that repo from github
+     for others ->>>create your own branch
+     write your code in only your branch
+     when u completed commit
+     inform to others about coomit
+     and last is first one guy take all(fetch) up to date branchs and merge all with the main branch
+              git fetch - git fetch all branchs
+              git branch - main uesr(first) git show all branchs
+              git switch branchname - main guys can switch to branch and can see new code
+              git switch master - then main comes to main branch
+              git merge branchname - main guy merged that branch
+     another- git switch master
+              git fetch 
+              git pull - fetch and merge together - after this  another guy can see merged code did by main guys
+              
+
+suppsed I did a commit for all files but didnot till now push How can we do uncommit that so for u have to use a cmd - git reset --soft HEAD~1
