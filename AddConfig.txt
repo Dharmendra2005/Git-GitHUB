@@ -25,7 +25,7 @@ making a checkpoint or saved point
 
 git cmd which should be know first---------->
 git status -s -> to know current status of unstaged or staged files
-git log --oneline -> to know current status of  the saved point
+git log --oneline -> to know current status of  the saved point ->>> to end process - press q
 
 to ignore file in the folder we create a new .gitignore file in that folder
 
@@ -41,7 +41,7 @@ going back to  some privious saved points
         logiging everything
         reverting back to saved point
 
-        git reset -hard HARD~1,2,3,4...
+        git reset --hard HARD~1,2,3,4...
         
 
 -----------------------------------------------------------
@@ -49,12 +49,12 @@ going back to  some privious saved points
 2.-> we can check which file in which stages- git status -s
 3.-> we can check How much saved check points - git log --oneline  --graph
 So ->
-     git status tell about the status of files before and after commited files u have to some afte commit
+     git status tell about the status of files before and after commited files u have DID  afte commit
      git log telling about all history of the files
 
 what is opppsite of git init -> Remove-Item -Recurse -Force .git it will disconnect the git 
 
-Git Branching
+Git Branching->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 git init
 git branch - it will show main branch
@@ -67,7 +67,7 @@ git branch -d branchname -> to delete branch
 
 git switch -C branchname -> here we first create branch and switch to that branch
 
-git stash -> this cmd when we do some changes in our branch but we don't to update that changes and want to keep in middle way
+git stash -> this cmd when we do some changes in our branch but we don't want to update that changes and want to keep in middle way
 then to come back with middle way use - > git stash apply and clear stash -> git stash clear
 
 
@@ -94,4 +94,18 @@ Collabrating ->>
               git pull - fetch and merge together - after this  another guy can see merged code did by main guys
               
 
-suppsed I did a commit for all files but didnot till now push How can we do uncommit that so for u have to use a cmd - git reset --soft HEAD~1
+supposed I did a commit for all files but didnot till now push How can we do uncommit that so for u have to use a cmd - git reset --soft HEAD~1
+
+I did push all commit I dont want to do that so How I can go back
+git reset --soft HEAD~1
+git reset --soft HEAD~2...
+
+and I want to commit again that same commit which i did before for this first check
+git reflog - it will so all info
+
+now based on HARD~.. number choose value and add with
+git reset --hard <commit-hash> do one by one 
+
+and for verifying use   = git log
+
+
